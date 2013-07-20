@@ -22,7 +22,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="17" />
 
     <original-package android:name="com.android.mms" />
 
@@ -57,10 +57,12 @@
                 android:description="@string/desc_mms_push"/>
     <uses-permission android:name="android.permission.MMS_PUSH"/>
 
-    <application android:name="MmsApp"
+    <application 
+            android:name="MmsApp"
             android:label="@string/app_label"
             android:icon="@mipmap/ic_launcher_smsmms"
             android:taskAffinity="android.task.mms"
+            android:hardwareAccelerated="true"
             android:allowTaskReparenting="true">
 
         <service android:name=".transaction.TransactionService"
